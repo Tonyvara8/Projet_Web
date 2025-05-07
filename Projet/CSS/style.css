@@ -1,8 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap');
-
-
-
 
 * {
     margin: 0;
@@ -10,61 +6,73 @@
     box-sizing: border-box;
     text-decoration: none;  
     list-style: none;
-
-
-
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-image: url(https://moana-club.fr/wp-content/uploads/2022/04/salle-musculation.jpg);
     background-size: cover;
-    font-family:  "Montserrat", system-ui;
-   overflow: hidden;}
-
-header{
-   height: 100vh;
-   width: 100vw;
-   
+    font-family: "Montserrat", system-ui;
+    overflow: hidden;
 }
 
-.navbar{
+header {
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar {
     position: absolute;
-    padding:  30px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
-    width : 100%;
+    width: 100%;
     box-sizing: border-box;
 }
 
-.navbar a{
+.navbar a {
     color: #000000;
     font-size: 25px;
     font-weight: 500;
     font-style: bold;
-   padding: 10px;
+    padding: 1px;
 }
 
-.navbar .nav-links ul{
-   display: flex;
-   box-shadow: #fff;
-
+.navbar .nav-links ul {
+    display: flex;
+    box-shadow: #fff;
 }
 
-
-.navbar .nav-links ul li{   
+.navbar .nav-links ul li {
     margin: 0 25px;
-   
 }
 
-.navbar .nav-links ul li a:hover{
+.navbar .nav-links ul li a:hover {
     color: #fdfeff;
     transition: 0.3s;
     border-radius: 10%;
-box-shadow: 0px 0px 20px 8px;
+    box-shadow: 0px 0px 20px 8px;
 }
 
-footer{ 
+#content {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+footer {
     opacity: 0;
     display: flex;
     position: absolute;
@@ -80,21 +88,22 @@ footer{
     z-index: 10;
 }
 
-footer:hover{
-    opacity: 1 ;
+footer:hover {
+    opacity: 1;
 }
+
 @keyframes shrinkAndSlide {
     0% {
-        transform: scale(1.2) translateY(0); /* Taille normale, position initiale */
-        opacity: 1; /* Complètement visible */
+        transform: scale(1.2) translateY(0);
+        opacity: 1;
     }
     40% {
-        transform: scale(0.3) translateY(0); /* Réduit à 30% au centre */
-        opacity: 1; /* Toujours visible */
+        transform: scale(0.3) translateY(0);
+        opacity: 1;
     }
     100% {
-        transform: scale(0.3) translateY(200%); /* Glisse vers le bas */
-        opacity: 0; /* Complètement invisible */
+        transform: scale(0.3) translateY(200%);
+        opacity: 0;
     }
 }
 
@@ -102,7 +111,7 @@ footer:hover{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation-fill-mode: forwards; /* Conserve l'état final de l'animation */
+    animation-fill-mode: forwards;
     z-index: 10;
     position: relative;
 }
@@ -119,19 +128,16 @@ footer:hover{
     align-items: center;
 }
 
-  #intro video {
+#intro video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transform: scale(1.2);
     border-radius: 10%;
-
-  }
-
+}
 
 #main {
     position: relative;
-    z-index: 5; /* Assurez-vous que le contenu principal est au-dessus de l'intro */
-    opacity: 1; /* Invisible au départ */
+    z-index: 5;
+    opacity: 1;
 }
-
