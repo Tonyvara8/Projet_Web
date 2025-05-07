@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap');
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +17,10 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-image: url(../IMG/fond.jpg);
+    background-image: url(https://moana-club.fr/wp-content/uploads/2022/04/salle-musculation.jpg);
     background-size: cover;
-
-}
+    font-family:  "Montserrat", system-ui;
+   overflow: hidden;}
 
 header{
    height: 100vh;
@@ -32,7 +38,7 @@ header{
 }
 
 .navbar a{
-    color: #fff;
+    color: #000000;
     font-size: 25px;
     font-weight: 500;
     font-style: bold;
@@ -71,8 +77,61 @@ footer{
     align-items: center;
     border-radius: 15%;
     transition: 0.4s;
+    z-index: 10;
 }
 
 footer:hover{
     opacity: 1 ;
 }
+@keyframes shrinkAndSlide {
+    0% {
+        transform: scale(1.2) translateY(0); /* Taille normale, position initiale */
+        opacity: 1; /* Complètement visible */
+    }
+    40% {
+        transform: scale(0.3) translateY(0); /* Réduit à 30% au centre */
+        opacity: 1; /* Toujours visible */
+    }
+    100% {
+        transform: scale(0.3) translateY(200%); /* Glisse vers le bas */
+        opacity: 0; /* Complètement invisible */
+    }
+}
+
+#intro video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-fill-mode: forwards; /* Conserve l'état final de l'animation */
+    z-index: 10;
+    position: relative;
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  #intro video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+    border-radius: 10%;
+
+  }
+
+
+#main {
+    position: relative;
+    z-index: 5; /* Assurez-vous que le contenu principal est au-dessus de l'intro */
+    opacity: 1; /* Invisible au départ */
+}
+
