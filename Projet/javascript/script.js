@@ -23,3 +23,9 @@ if (localStorage.getItem('video') === 'vu') {
         });
     };
 }
+
+window.addEventListener('beforeunload', () => {
+    // Réinitialiser la vidéo
+    video.pause();
+    video.currentTime = 0;
+});

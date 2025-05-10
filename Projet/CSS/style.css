@@ -13,7 +13,7 @@ body {
     background-image: url(https://moana-club.fr/wp-content/uploads/2022/04/salle-musculation.jpg);
     background-size: cover;
     font-family: "Montserrat", system-ui;
-    overflow: hidden;
+    overflow: auto;
 }
 
 header {
@@ -75,7 +75,7 @@ header {
 footer {
     opacity: 0;
     display: flex;
-    position: absolute;
+    position: static;
     bottom: 0;
     width: 100%;
     height: 40px;
@@ -85,7 +85,7 @@ footer {
     align-items: center;
     border-radius: 15%;
     transition: 0.4s;
-    z-index: 10;
+    z-index: 1;
 }
 
 footer:hover {
@@ -137,7 +137,75 @@ footer:hover {
 }
 
 #main {
-    position: relative;
-    z-index: 5;
+   
+    z-index: 2;
     opacity: 1;
+}
+
+
+
+ap-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    height: 450px;
+    position: relative;
+    z-index: 2;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+
+}
+
+
+ #map {
+    height: 430px;
+    border: solid 1.5px #ffffff;
+    display: flex
+;
+    width: 50%;
+  
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 18px rgb(255 255 255 / 14%);
+    position: absolute;
+     left:35%;
+    transform: translate(0, 0);
+   top : 35%;
+}
+
+#searchbar{
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    border: solid 1.5px rgb(249, 249, 249);
+        box-shadow: 0px 4px 15px 18px rgb(255 255 255 / 14%);
+
+    position: absolute;
+    top:35% ;
+    width: 410px;
+    margin-left: 15px;
+}
+
+#bar{
+    width:75%;
+    resize: none;
+    border: none;
+}
+
+#bar:focus{
+    outline: none;
+}
+#searchbtn{
+    margin-left: 15px;
+    top:30%;
+    position: absolute;
+}
+#searchbtn:hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
 }
