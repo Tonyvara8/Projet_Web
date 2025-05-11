@@ -22,12 +22,7 @@ out center;`
     
     body: query
   })
-    .then(response => {
-      if (!response.ok) throw new Error("Erreur serveur Overpass");
-      return response.json();
-     
-
-    })
+    .then(response =>   response.json())
     .then(data => {
       console.log("Résultat Overpass :", data);
       if (data.elements.length > 0) {
