@@ -41,14 +41,20 @@
 
 
    <main>
-
-
+    <div id="recherche">
+    <div class="texte">
+    <h1 id="carte">Salles de sports proches de chez vous </h1>
+    </div>
     <div id="searchbar">
-      <textarea name="searchbar" id="bar" placeholder="Entrez le nom de votre ville"></textarea>
+      <input type="text" id="bar" placeholder="Entrez le nom de votre ville">
       <button id="searchbtn">Rechercher</button>
+      </div>
+      <div id="chargement">
+        <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" id="gif">
+        <p>Chargmement...</p>
+      
 
-
-
+    </div>
 
     </div>
     <div id="map">
@@ -67,7 +73,6 @@
 </footer>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-  <!-- ✅ Script personnalisé pour la carte -->
 
        <script src="../javascript/scriptmap.js"></script>
 
