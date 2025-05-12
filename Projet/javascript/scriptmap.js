@@ -14,29 +14,22 @@ var villeStock = ville.value;
 console.log(ville.value);
 ville.value="";
 console.log(villeStock);
-var query = `[out:json][timeout:25];
-nwr["name"~"^${villeStock}", i];
-out center;`
-  fetch("https://overpass-api.de/api/interpreter", {
-    method: "POST",
-    
-    body: query
+
+ fetch(`https://nominatim.openstreetmap.org/search?city=${villeStock}&format=json`)  // documentation ==> (https://nominatim.org/release-docs/latest/api/Search/)
+  .then(response => response.json())
+  .then(data => {
+    if (data.length > 0) {
+      var lat = data[0].lat;
+      var lon = data[0].lon;
+      map.setView([lat, lon], 11);
+      // ... ensuite ta requête bbox pour les salles de sport ...
+    } else {
+      alert("Aucune ville trouvée");
+    }
   })
-    .then(response =>   response.json())
-    .then(data => {
-      console.log("Résultat Overpass :", data);
-      if (data.elements.length > 0) {
-        const coord = data.elements[0];
-       var lat = coord.lat;
-      var long = coord.lon;
-      map.setView([lat, long], 11); // Centrer la carte sur la ville
-      } else {
-        console.log("Aucune ville trouvée.");
-      }
-    })
-    .catch(error => {
+  .catch(error => {
       console.error("Erreur fetch Overpass :", error);
-          })
+  });
      
  map.once('moveend', () => {
     const bounds = map.getBounds();    // Donne les limites de la map
@@ -62,7 +55,10 @@ out center;`
         L.marker([lat, long]).addTo(map).bindPopup(nomsalle);   // affiche un popup au marqueur de la salle avec son nom
        } ;}
       );
-      chargement.style.display="none";})
+      chargement.style.display="none";
+      setTimeout(() => {},3000);
+      })
       .catch(error => {
         console.error("Erreur avec Overpass API:", error);
-      })})});
+      });
+    })});
