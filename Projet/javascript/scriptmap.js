@@ -19,7 +19,7 @@ console.log(villeStock);
   .then(response => response.json())
   .then(data => {
     if (data.length > 0) {
-      var lat = data[0].lat;
+      var lat = data[0].lat;  
       var lon = data[0].lon;
       map.setView([lat, lon], 11);
     } else {
@@ -55,7 +55,7 @@ console.log(villeStock);
        } ;}
       );
       load.style.display="none";
-      setTimeout(() => {},3000);
+     
       })
       .catch(error => {
         console.error("Erreur avec Overpass API:", error);
