@@ -8,7 +8,7 @@
  button= document.getElementById("searchbtn"); 
 button.addEventListener('click',(event) =>{
 const load =document.getElementById("chargement");
- chargement.style.display="block";
+ load.style.display="block";
 var ville = document.getElementById("bar");
 var villeStock = ville.value; 
 console.log(ville.value);
@@ -22,7 +22,6 @@ console.log(villeStock);
       var lat = data[0].lat;
       var lon = data[0].lon;
       map.setView([lat, lon], 11);
-      // ... ensuite ta requête bbox pour les salles de sport ...
     } else {
       alert("Aucune ville trouvée");
     }
@@ -55,7 +54,7 @@ console.log(villeStock);
         L.marker([lat, long]).addTo(map).bindPopup(nomsalle);   // affiche un popup au marqueur de la salle avec son nom
        } ;}
       );
-      chargement.style.display="none";
+      load.style.display="none";
       setTimeout(() => {},3000);
       })
       .catch(error => {
