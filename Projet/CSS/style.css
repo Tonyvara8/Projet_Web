@@ -21,6 +21,10 @@ header {
     width: 100vw;
 }
 
+#menu{
+    display: none;
+}
+
 .navbar {
     position: absolute;
     padding: 30px;
@@ -278,4 +282,44 @@ height: 20%;
 transform: translateX(-50%);
 left:50%;
 position: relative;
+}
+
+
+
+@media (max-width: 799px) {
+    body{
+    }
+    .nav-links {
+        position: absolute;
+                display: flex;
+        left:0;
+        width: 15%;
+        height:50%;
+        border: solid 1px rgb(3, 249, 52);
+
+
+    }
+    #menu{
+        position: absolute;
+        left:0%;
+        transform: translateX(50%);
+        padding: 0px;
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+    .navbar:not(.nav-links) {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0px;
+    }
+.navbar .nav-links ul{
+    display: none;
+    
+ }   
+       
+.nav-links:hover{
+        display:flex;
+        cursor:pointer
+    }
 }
