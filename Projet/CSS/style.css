@@ -31,6 +31,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    transition: 0.2s;
 }
 
 .navbar a {
@@ -179,8 +180,9 @@ ap-container {
     position: relative;
     border: none;
     padding: 5px;
-    border-radius: 10%;
-    transform: translate(-50%, -50%);}
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
 #searchbtn:hover{
     background-color: #f2f2f2;
     cursor: pointer;
@@ -250,7 +252,6 @@ position: relative;
         left:0;
         width: 50%;
         height:100%;
-        border: solid 1px rgb(3, 249, 52);
         z-index: 7;
 
     }
@@ -272,16 +273,17 @@ position: relative;
     }
 .navbar .nav-links ul{
     border-radius: 10px;
-    height: 945px;
+    height: 980px;
     width: 220px;
-    padding-top: 60px;
+    padding-top: 95px;
     position: absolute;
     display: none;
     padding-left: 45px;
     flex-direction: column;
     gap: 25px;
-    background-color: #b8b8b8;
+    background-color: #929292;
     z-index: 6;
+    transform: translateX(-5%);
     
  }   
 .navbar .nav-links ul li{
@@ -289,7 +291,7 @@ position: relative;
     display: flex;
     display: block;
     text-align: left;
-    transition: 2s;
+    margin-bottom: 50px;
 
 }
 
@@ -297,10 +299,43 @@ position: relative;
 .nav-links:hover{
     position: absolute;
     width:50%;
-border: solid 1px rgb(180, 8, 219);
     height: 100%;
     display:flex;
         cursor:pointer;
-        transition: 2s;
+        transition: 0.5s;
     }
+}
+
+@media (min-width: 790px) {
+
+   .navbar {
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar a {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: bold;
+    padding: 1px;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    box-shadow: #fff;
+    
+}
+.nav-links{
+    display: block;
+}
+#list{display: flex;}
+.navbar .nav-links ul li {
+
+    margin: 0 25px;
+    display: flex;
+}
 }
