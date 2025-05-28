@@ -1,3 +1,15 @@
+const menu = document.getElementById('menu');
+const list = document.getElementById('list');
+menu.addEventListener('click', function() {
+    if (list.style.display === 'flex') {
+        list.style.display = 'none';
+    } else {
+        list.style.display = 'flex';
+        list.style.flexDirection = 'column'; 
+    }
+});
+
+
 const titre = document.getElementById("content");
 window.addEventListener("load", () => {
 setTimeout(() => {
@@ -17,4 +29,4 @@ document.getElementById("accueil").insertBefore(citation, pAccueil);
 document.getElementById("paccueil").style.opacity="1";
 
 }, 2000)
-});
+});xx
