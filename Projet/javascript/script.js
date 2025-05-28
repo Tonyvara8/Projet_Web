@@ -11,6 +11,10 @@ setTimeout(() => {
 citation.textContent="Devenez la meilleure version de vous";
 citation.setAttribute("id", "citation");
 
-document.getElementById("accueil").appendChild(citation);}
-, 2000)
+const pAccueil = document.getElementById("paccueil");
+
+document.getElementById("accueil").insertBefore(citation, pAccueil);
+document.getElementById("paccueil").style.opacity="1";
+
+}, 2000)
 });

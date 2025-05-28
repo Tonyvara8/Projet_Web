@@ -81,12 +81,22 @@ header {
     top:18%;
     left: 50%;
     transform: translateX(-50%);
-    font-size:1,1em;
+    font-size:1.1em;
     font-family: none;
     font-style: italic;
 }
-
-
+#paccueil{
+    position: absolute;
+    top: 24%;
+    width: 85%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 0;
+    transition: 2s;
+}
 
 footer {
     opacity: 0;
