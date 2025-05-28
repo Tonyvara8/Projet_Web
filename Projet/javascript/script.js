@@ -1,6 +1,6 @@
 const menu = document.getElementById('menu');
 const list = document.getElementById('list');
-menu.addEventListener('click', function() {
+menu.addEventListener('click', function() {                  // avec les media queries, ca sert a quand l'icone du menu est affiché, on peut cliquer pour afficher l'onglet du menu ou le fermer
     if (list.style.display === 'flex') {
         list.style.display = 'none';
     } else {
@@ -10,8 +10,10 @@ menu.addEventListener('click', function() {
 });
 
 
-const titre = document.getElementById("content");
-window.addEventListener("load", () => {
+
+
+const titre = document.getElementById("content");       
+window.addEventListener("load", () => {      //anime le texte d'accueil
 setTimeout(() => {
     titre.style.top ="10%"; 
 
@@ -29,4 +31,4 @@ document.getElementById("accueil").insertBefore(citation, pAccueil);
 document.getElementById("paccueil").style.opacity="1";
 
 }, 2000)
-});xx
+});
