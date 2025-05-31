@@ -256,7 +256,7 @@ main{
   display: none;
 
 }
-img {
+#menu {
 width: 20%;
 height: 20%;
 transform: translateX(-50%);
@@ -339,3 +339,77 @@ position: relative;
     flex-direction: row !important;
 }
 }
+
+
+
+.membre {
+    border: solid 1px #010000; 
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 15px;
+    border-radius: 15px;
+    height: 100%;
+    padding: 0px 5px;
+    /* text-decoration: none; */
+    /* height: 150px; */
+    /* background-color: rgb(210, 119, 0); */
+    /* position: relative; */
+}
+
+#sep{
+        display: flex;
+        height: 47%;
+        position: absolute;
+        /* border: solid 2px orange; */
+        width: 100%;
+}
+
+.membre img {
+        width: 150px;
+        height: 140px;
+        border-radius: 10px;
+        position: absolute;
+        top: 7%;
+}
+.membre h1{position: absolute;
+    display: flex;
+    top: 50%;
+    font-size: 1.8em;}
+
+.membre h2{
+        /* border: solid 1px red; */
+        position: absolute;
+        display: flex;
+        justify-content: center;   /* centre horizontalement */
+        align-items: center;       /* centre verticalement */
+        top: 62%;
+        width: 100%;
+        height: 25%;
+}
+.membre p {
+        position: absolute;
+        display: flex;
+        top:90%;
+    padding: 0 15px;
+}
+#github{
+           position: absolute;
+    top: 100%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+        }
+
+#github img {
+    width: 182px;
+    height: 120px;
+    position: absolute;
+    top: 15%;
+}
+
+
+
