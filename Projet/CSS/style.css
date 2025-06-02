@@ -7,17 +7,23 @@
     text-decoration: none;  
     list-style: none;
 }
-
+html, body {
+    height: 100%;
+    min-height: 100vh;
+}
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url(https://moana-club.fr/wp-content/uploads/2022/04/salle-musculation.jpg);
     background-size: cover;
+    background-repeat:no-repeat ;
+    background-attachment: fixed;
     font-family: "Montserrat", system-ui;
     overflow: auto;
+    min-height: 100vh;
 }
 
 header {
-    height: 100vh;
+    height: 10vh;
     width: 100vw;
 }
 
@@ -78,16 +84,18 @@ header {
 }
 #citation{
     position: absolute;
-    top:18%;
+    top: 20vh;
     left: 50%;
     transform: translateX(-50%);
     font-size:1.1em;
     font-family: none;
     font-style: italic;
+    font-size: 2vw;
+    text-decoration: none;
 }
 #paccueil{
     position: absolute;
-    top: 24%;
+    top: 30vh;
     width: 85%;
     text-align: center;
     justify-content: center;
@@ -97,35 +105,53 @@ header {
     opacity: 0;
     transition: 2s;
 }
+#paccueil2{
+    position: sticky;
+    top: 46%;
+    padding: 16px;
+    opacity: 0;
+    transition: 2s;
+    text-align: center;
+    }
+
+
+    #lienmotiv{
+        position: sticky;
+        top: 64%;
+        color: red;
+        text-decoration: underline;
+        opacity: 0;
+        transition: 2s;
+        text-align: center;
+        font-size: 1em;
+    }
 
 footer {
-    opacity: 0;
-    display: flex;
-    position: static;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
+     display: flex;
+    flex-direction: row;
     background-color: #bed9ee17;
     color: #fff;
     justify-content: center;
     align-items: center;
-    border-radius: 15%;
-    transition: 0.4s;
+    width: 100%;
+    text-align: center;
+    opacity: 0; 
+    border-radius: 0;
+    position: relative;
     z-index: 1;
+    transition: 0.4s;
+    margin-top: 0;
 }
 
 footer:hover {
     opacity: 1;
 }
 
-
 #main {
-   
     z-index: 2;
     opacity: 1;
+
 }
-
-
 
 ap-container {
     width: 100%;
@@ -141,9 +167,7 @@ ap-container {
     height: 100%;
     border: 0;
     display: block;
-
 }
-
 
  #map {
     height: 430px;
@@ -151,7 +175,6 @@ ap-container {
     display: flex
 ;
     width: 50%;
-  
     border-radius: 10px;
     box-shadow: 0px 4px 15px 18px rgb(255 255 255 / 14%);
     position: absolute;
@@ -165,20 +188,18 @@ ap-container {
     display: inline-block;
     padding: 10px;
     background-color: white;
-    border: solid 1.5px rgb(249, 249, 249);
-        box-shadow: 0px 4px 15px 18px rgb(255 255 255 / 14%);
-
-    position: absolute;
-    top:35% ;
-    width: 40%;
+    border: solid 1.5px rgb(255 255 255);
+    box-shadow: 0px 4px 15px 18px rgb(255 255 255 / 14%);
+    position: fixed;
+    top: 46%;
+    width: 35%;
+    height: 14%;
 }
 
 #bar{
     width: 100%;
     resize: none;
     border: solid 1px rgb(253, 253, 253);
-    
-
 }
 
 #recherche{
@@ -189,9 +210,8 @@ ap-container {
     border-radius: 10px;
     position: relative;
     padding-left: 20px;
-    
-
 }
+
 #bar:focus{
     outline: none;
 }
@@ -232,29 +252,34 @@ box-shadow: 0px 0px 20px 0px rgb(115 112 112 / 50%);
     z-index: 2;
 }
 
-main{
-    margin-top: 2.5%;
+main {
+     flex: 1;
+    width: 90vw;
+    max-width: 1000px;
+    margin: 2.5% auto 0 auto;
     background-color: rgba(255, 255, 255, 0.927);
-    position: absolute; 
+    position: relative;
     display: flex;
-    border:solid 1px rgb(255, 255, 255);
-    top: 10%;
-    left: 50%;
-    width: 80%;
-    transform: translateX(-50%);
-    height: 85%;
-    border-radius: 10px;;
+    flex-direction: column;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 2vw 2vw 2vw 2vw;
+    min-height: 100vh; /* important pour flexbox */
 }
+
 
 #chargement{
     position: absolute;
   top: 50%;
-  justify-items: flex;
+  justify-items:  center;
   transform: translateX(-50%);
   left: 22%;
   font-size: 30px;
   display: none;
-
 }
 #menu {
 width: 20%;
@@ -264,10 +289,86 @@ left:50%;
 position: relative;
 }
 
-
-
 @media (max-width: 799px) {
-   
+    #citation{font-size: 5vw;}
+   .texte{
+    font-size: 9px;
+    width: 72%;
+   }
+   #paccueil{
+    
+top: 32vh;
+   }
+   #searchbar {
+    border-radius: 10px;
+    display: flex
+;
+    padding: 0px 8px;
+    background-color: white;
+    border: solid 1.5px rgb(249, 249, 249);
+    box-shadow: 0px 4px 15px 18px rgb(255 255 255 / 14%);
+    position: absolute;
+    top: 20%;
+    width: 87%;
+    align-items: center;
+    justify-content: center;
+}
+
+#bar {font-size: 10px;top: 156%;position: absolute;}
+ #searchbtn{       
+    display: flex;
+    align-items: center;
+    left: 17%;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    top: 1.45vh;
+}
+
+      #map{      height: 47vh;
+    border: solid 1.5px #ffffff;
+    display: flex
+;
+    width: 99%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 18px rgb(255 255 255 / 14%);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 38%;
+}
+
+    #chargement {        position: inherit;
+        top: 18%;
+        justify-items: center;
+        font-size: 30px;
+        display: none;
+        transform: scale(0.5) translateX(-50%);
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+        height: 25%;
+        width: 68vw;
+    }
+
+    #lienmotiv{    top: 73%;}
+    img#gif {
+            width: 20vw;
+        justify-content: center;
+        position: absolute;
+        display: flex
+;
+        left: 26%;
+        top: 13%;
+        z-index: 55;
+}
+p#\.\.\. {
+    position: relative;
+           top: 57%
+}
     .nav-links {
         position: absolute;
         display: flex;
@@ -275,7 +376,6 @@ position: relative;
         width: 50%;
         height:100%;
         z-index: 7;
-
     }
     #menu{
         position: absolute;
@@ -314,10 +414,8 @@ position: relative;
     display: block;
     text-align: left;
     margin-bottom: 50px;
-
 }
 
-       
 .nav-links:hover{
     position: absolute;
     width:50%;
@@ -340,76 +438,301 @@ position: relative;
 }
 }
 
-
-
 .membre {
-    border: solid 1px #010000; 
-    width: 100%;
+    border: solid 1px #010000;
+    width: 100vw;
     display: flex;
     text-align: center;
     justify-content: center;
     margin: 15px;
     border-radius: 15px;
-    height: 100%;
+    height: 44vh;
     padding: 0px 5px;
-    /* text-decoration: none; */
-    /* height: 150px; */
-    /* background-color: rgb(210, 119, 0); */
-    /* position: relative; */
 }
 
 #sep{
         display: flex;
         height: 47%;
         position: absolute;
-        /* border: solid 2px orange; */
         width: 100%;
 }
 
 .membre img {
-        width: 150px;
-        height: 140px;
+        height: 17vh;
         border-radius: 10px;
         position: absolute;
-        top: 7%;
+        top: 3.5vh;
 }
-.membre h1{position: absolute;
+.membre h1{
+    position: absolute;
     display: flex;
-    top: 50%;
-    font-size: 1.8em;}
+    top: 21vh;
+    font-size: 2.8vw;
+    }
 
 .membre h2{
-        /* border: solid 1px red; */
         position: absolute;
         display: flex;
-        justify-content: center;   /* centre horizontalement */
-        align-items: center;       /* centre verticalement */
-        top: 62%;
+        justify-content: center;
+        align-items: center;
+        top: 25vh;
         width: 100%;
         height: 25%;
+        font-size: 2.1vw;
 }
 .membre p {
         position: absolute;
         display: flex;
         top:90%;
-    padding: 0 15px;
+        padding: 0 15px;
+        font-size: 1.5vw;
 }
 #github{
            position: absolute;
-    top: 100%;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-
+           top: 52vh;
+           display: flex;
+           width: 78vw;
+           height: 34vh;
+           justify-content: center;
+           left: 7%;
         }
 
 #github img {
-    width: 182px;
+    width: 200px;
     height: 120px;
     position: absolute;
     top: 15%;
 }
 
+#clique{color: black;
+    text-decoration: none;
+    transition : 0.2s;
+    height: 10%;
+    border-radius: 5px;
+    padding: 0 5px;}
+#clique:hover{
+    cursor: pointer;
+    color: #000000;
+    text-decoration: underline;
+    background-color: #b5b5b59e;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+  label {
+    display: block;
+    margin-top: 1rem;
+  }
+  input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border-radius: 10px;
+  }
+ 
+  #summary {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: -webkit-left;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    border: solid 1px;
+    background-color: #8080803b;
+    margin-bottom: 15px;
+}
+  #userForm {
+       background-color: rgb(122 122 122 / 17%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0px auto;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: scale(0.7);
+    position: relative;
+    justify-content: center;
+    display: flex
+;
+    flex-direction: column;
+}
+  
+
+.motivation-ul {
+    color: white;
+}
+.prj-ul {
+    color: white;
+}
+.prj-p {
+    color: white;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  #whiteButton {
+    background-color: white;
+    color: black;
+    border: 2px solid #000;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  #whiteButton:hover {
+    background-color: #e0e0e0;
+  }
+#videoContainer {
+  display: flex;
+  width: 960px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+main #videoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: static;
+}
+
+main #videoContainer iframe {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block;
+}
+
+main #whiteButton {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto 20px auto;
+  left: unset;
+  position: static;
+  transform: none;
+  display: block;
+}
+
+@media (max-width: 799px) {
+  main {
+    width: 98vw;
+    max-width: 100vw;
+    padding: 2vw 1vw;
+  }
+  main #videoContainer iframe {
+    max-width: 100vw;
+    aspect-ratio: 16/9;
+    height: auto;
+    max-height: 250px;
+  }
+  main #whiteButton {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+.motivation-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#motivation{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+}
+
+#motiv5{
+    margin : 3px 0;
+    font-size: 1em;
+    color:black;
+    transition: 0.4s;
+    margin-top: 4%;
+}
+
+#quizz{
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+margin: 2rem;
+
+background: #f8f9fa;
+
+padding: 1rem;
+
+border-radius: 8px;
+}
+#quizz_container {
+
+display: flex;
+
+border: solid;
+
+flex-direction: column;
+
+text-decoration: underline;
+
+margin: 10px;
+
+border-radius: 10px;
+
+padding-top: 13px;
+}
+#quizz_container h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+#infosup{
+    position:relative
+}
+#envoyer{
+width: 34%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    margin-top: 24px;
+    padding: 4px;
+    border-radius: 7px;
+}
 
 
+#envoyer:hover{
+    cursor: pointer;
+    border: solid 0.5px #ffffff;
+    box-shadow: 0px 0px 20px 0px rgb(115 112 112 / 50%);
+}
+
+#lienmotiv:hover{
+    cursor: pointer;
+    font-size: 2em;;
+}

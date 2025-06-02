@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset='utf-8'>
-    <title>Quizz</title>
-    <link rel="icon" type='image/png' href='../IMG/icone.png'> 
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="../CSS/style.css">
+  <meta charset="UTF-8" />
+  <title>Calculateur TDEE</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+      <link rel="icon" type='image/png' href='../IMG/icone.png'> 
+
 </head>
 <body>
-  <header>
+   <header>
      <nav class="navbar">
         <a href="#" >Musculation</a>
                     <div class="nav-links">
@@ -25,26 +25,55 @@
             </div>
     </nav>
     </header>
+<main id="quizz">
+  <div id="quizz_container">
+<h2>Questionnaire Utilisateur</h2>
+  <form id="userForm">
+    <label>Âge :
+      <input type="number" id="age" required />
+    </label>
 
+    <label>Sexe :
+      <select id="sex" required>
+        <option value="male">Homme</option>
+        <option value="female">Femme</option>
+      </select>
+    </label>
 
+    <label>Taille (cm) :
+      <input type="number" id="height" required />
+    </label>
 
+    <label>Poids (kg) :
+      <input type="number" id="weight" required />
+    </label>
 
+    <label>Nombre de pas par jour :
+      <input type="number" id="steps" />
+    </label>
 
+    <button id="envoyer" type="submit">Envoyer</button>
+  </form>
 
-   <main>
-
-
-   </main>
-
-
-
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2025 Musculation. Tous droits réservés.</p>
-       
-    </div>
-</footer>
-    <script src='../javascript/script.js'></script>
-
+  <div id="summary"></div>
+  <script src="../javascript/prj.js"></script>
+  <div id="infosup"></div>
+  <h2>Informations complémentaires</h2>
+  <ul style="
+    font-size: 84%;
+    margin: 15px;
+">
+    <li>
+      <p>
+        Dans le cas d'une sèche, on diminuera notre consomation de Calories quotidienne de 10 à 15%.
+      </p>
+    </li>
+    <li>
+      <p>
+        Dans le cas d'une Prise de masse, on augmentera notre consomation de Calories quotidienne de 5 à 10%.
+      </p>
+    </li>
+  </ul></div></div></main>
 </body>
+
 </html>
